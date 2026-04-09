@@ -1,0 +1,17 @@
+# Ignore all tests
+**/src/test/**
+
+# CSE 122
+
+# C2: Twitter Trends
+**/src/main/java/Picture.java
+**/src/main/java/Tweet.java
+
+# P3: Program Linting
+**/run/TestFile.java
+**/src/main/java/Tweet.java
+
+# CSE 123
+
+# C0: Search Engine
+**/src/main/java/Media.java

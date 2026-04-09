@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN" "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+<suppressions>
+    <!-- Test Files -->
+    <suppress checks=".*" files=".*[\\/]src[\\/]test[\\/].*" />
+    <!-- Provided Files from CSE 122 C2: Twitter Trends project -->
+    <suppress checks=".*" files=".*[\\/](Picture|Tweet)\.java" />
+    <!-- Provided Files from CSE 123 C0: Search Engine project -->
+    <suppress checks=".*" files=".*[\\/](Media)\.java" />
+</suppressions>

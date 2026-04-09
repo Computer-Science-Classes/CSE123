@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Cache javaWhitelist 
+        uses: actions/cache@v4
+        with:
+          path: javaWhitelist.jar 
+          key: javaWhitelist-latest
+
+      - name: Download javaWhitelist
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          curl -L https://github.com/gituser12981u2/javaWhitelist/releases/latest/download/javaWhitelist.jar -o javaWhitelist.jar
+
+      - name: Run whitelist checker
+        run: |
+          set -euo pipefail
+          SRC_DIRS=$(find . -type d -path '*/src/main/java' | sort)
+          if [ -z "$SRC_DIRS" ]; then
+            echo "No src/main/java directories found; skipping."
+            exit 0
+          fi
+          while IFS= read -r d; do
+            echo "javaWhitelist $d"
+            java -jar javaWhitelist.jar --allowlist allowlist.txt "$d"
+          done <<< "$SRC_DIRS"
+
+      - name: Verify (format check + checkstyle + compile)
+        run: mvn -B -ntp verify
