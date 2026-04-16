@@ -1,7 +1,7 @@
 @ENFORCE_PREFIXES=java.,javax.
 
 @DISALLOW_NULL_LITERAL=false
-@DISALLOW_RETURN_FROM_VOID=true
+@DISALLOW_RETURN_FROM_VOID=false
 @DISALLOW_BREAK=true
 @DISALLOW_CONTINUE=true
 @DISALLOW_SWITCH=true
@@ -14,6 +14,7 @@ java.lang.Object#<init>
 
 java.lang.Object#toString
 
+java.lang.String#<init>
 java.lang.String#equals
 java.lang.String#equalsIgnoreCase
 java.lang.String#length

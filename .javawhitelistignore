@@ -15,3 +15,7 @@
 
 # C0: Search Engine
 **/src/main/java/Media.java
+
+# P0: Ciphers
+**/src/main/java/Client.java
+**/src/main/java/Cipher.java

@@ -8,6 +8,7 @@
     <name>cse123</name>
     <modules>
         <module>c0-search-engine</module>
+        <module>p0-ciphers</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

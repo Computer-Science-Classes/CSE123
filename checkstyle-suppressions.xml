@@ -5,6 +5,12 @@
     <suppress checks=".*" files=".*[\\/]src[\\/]test[\\/].*" />
     <!-- Provided Files from CSE 122 C2: Twitter Trends project -->
     <suppress checks=".*" files=".*[\\/](Picture|Tweet)\.java" />
-    <!-- Provided Files from CSE 123 C0: Search Engine project -->
+    <!-- =========================================
+    CSE 123 
+    ========================================= -->
+    <!-- Provided Files C0: Search Engine project -->
     <suppress checks=".*" files=".*[\\/](Media)\.java" />
+    <!-- Provided Files P0: Ciphers project -->
+    <suppress checks=".*" files=".*[\\/](Client)\.java" />
+    <suppress checks=".*" files=".*[\\/](Cipher)\.java" />
 </suppressions>
