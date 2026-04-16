@@ -108,16 +108,19 @@ public class Book implements Media, Comparable<Book> {
     }
 
     /**
-     * Produce a readable string representation. of this media
+     * Produces a readable string representation of this media.
      *
-     * If the media has zero ratings, the format will be: "<title> by [<artists>]"
+     * <p>
+     * <ol>
+     * <li>If the book has zero ratings: format is "<title> by [<artists>]"</li>
+     * <li>If the book has at least one review: format is "<title> by [<artists>]:
+     * <average rating> (<num ratings> ratings)"
+     * </ol>
      *
-     * If the media has at least one review, the format will be: "<title> by
-     * [<artists>]: <average rating> (<num ratings> ratings)"
-     *
+     * <p>
      * The average rating displayed will be rounded to at most two decimal places.
      *
-     * @returns The appropriately formatted string representation
+     * @returns The formatted string representation.
      */
     @Override
     public String toString() {
