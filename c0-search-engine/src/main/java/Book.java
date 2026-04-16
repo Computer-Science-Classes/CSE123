@@ -114,7 +114,7 @@ public class Book implements Media, Comparable<Book> {
      * <ol>
      * <li>If the book has zero ratings: format is "<title> by [<artists>]"</li>
      * <li>If the book has at least one review: format is "<title> by [<artists>]:
-     * <average rating> (<num ratings> ratings)"
+     * <average rating> (<num ratings> ratings)"</li>
      * </ol>
      *
      * <p>
