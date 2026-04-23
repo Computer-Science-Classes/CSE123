@@ -12,7 +12,6 @@ import java.util.*;
  * encoding string.
  */
 public class Substitution extends Cipher {
-    private String encoding;
     private Map<Character, Character> encodingMap;
     private Map<Character, Character> reverseEncodingMap;
 
@@ -58,13 +57,8 @@ public class Substitution extends Cipher {
      *             invalid character, or contains duplicate characters.
      */
     public void setEncoding(String encoding) {
-        if (this.encoding != null && this.encoding.equals(encoding)) {
-            return;
-        }
-
         checkEncoding(encoding);
-        this.encoding = encoding;
-        initEncodingMap();
+        initEncodingMap(encoding);
     }
 
     /**
@@ -83,7 +77,7 @@ public class Substitution extends Cipher {
      */
     @Override
     public String encrypt(String input) {
-        if (encoding == null) {
+        if (encodingMap == null) {
             throw new IllegalStateException();
         }
         checkValidChars(input);
@@ -113,7 +107,7 @@ public class Substitution extends Cipher {
      */
     @Override
     public String decrypt(String input) {
-        if (encoding == null) {
+        if (reverseEncodingMap == null) {
             throw new IllegalStateException();
         }
         checkValidChars(input);
@@ -174,7 +168,6 @@ public class Substitution extends Cipher {
      * Verifies that the given string is non-null, contains only valid cipher
      * characters, and contains no duplicate characters.
      *
-     *
      * @param text
      *            the string being verified.
      * @throws IllegalArgumentException
@@ -203,17 +196,23 @@ public class Substitution extends Cipher {
      * {@code encodingMap} maps each valid plaintext character to its encoded
      * character, and {@code reverseEncodingMap} maps each encoding character back
      * to its plaintext character.
+     *
+     * @param encoding
+     *            the encoding string used to init the maps.
      */
-    private void initEncodingMap() {
-        this.encodingMap = new HashMap<>();
-        this.reverseEncodingMap = new HashMap<>();
+    private void initEncodingMap(String encoding) {
+        Map<Character, Character> forward = new HashMap<>();
+        Map<Character, Character> reverse = new HashMap<>();
 
         for (int i = 0; i < encoding.length(); i++) {
             char plain = Cipher.VALID_CHARS.charAt(i);
             char encoded = encoding.charAt(i);
 
-            encodingMap.put(plain, encoded);
-            reverseEncodingMap.put(encoded, plain);
+            forward.put(plain, encoded);
+            reverse.put(encoded, plain);
         }
+
+        this.encodingMap = forward;
+        this.reverseEncodingMap = reverse;
     }
 }

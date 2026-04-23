@@ -13,9 +13,15 @@
 
 # CSE 123
 
+**/src/main/java/Client.java
+
 # C0: Search Engine
 **/src/main/java/Media.java
 
 # P0: Ciphers
-**/src/main/java/Client.java
 **/src/main/java/Cipher.java
+
+# C1: Abstract Strategy Game
+**/src/main/java/AbstractStrategyGame.java
+
+c1-abstract-strategy-game/**

@@ -21,8 +21,8 @@ public class CaesarKey extends Substitution {
      * @param key
      *            the key used to construct the encoding string.
      * @throws IllegalArgumentException
-     *             if {@code key} is not a valid encoding as defined by
-     *             {@link Substitution#checkUniqueValidChars(String)}
+     *             if {@code key} is null, has the wrong length, contains an invalid
+     *             character, or contains duplicate characters.
      */
     public CaesarKey(String key) {
         super(buildEncoding(key));
@@ -45,8 +45,8 @@ public class CaesarKey extends Substitution {
      *            the key used as the prefix of the encoding.
      * @return a complete encoding string derived from the key and valid characters.
      * @throws IllegalArgumentException
-     *             if {@code key} is not a valid encoding as defined by
-     *             {@link Substitution#checkUniqueValidChars(String)}.
+     *             if {@code key} is null, has the wrong length, contains an invalid
+     *             character, or contains duplicate characters.
      */
     private static String buildEncoding(String key) {
         checkUniqueValidChars(key);

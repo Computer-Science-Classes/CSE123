@@ -9,6 +9,7 @@
     <modules>
         <module>c0-search-engine</module>
         <module>p0-ciphers</module>
+        <module>c1-abstract-strategy-game</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
