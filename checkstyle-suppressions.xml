@@ -15,5 +15,4 @@
     <suppress checks=".*" files=".*[\\/](Cipher)\.java" />
     <!-- Provided Files C1: Abstract Strategy Game project -->
     <suppress checks=".*" files=".*[\\/](AbstractStrategyGame)\.java" />
-    <suppress checks=".*" files=".*[\\/](Quoridor|QuoridorBoard|QuoridorPawn)\.java" />
 </suppressions>

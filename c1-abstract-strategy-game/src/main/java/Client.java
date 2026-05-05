@@ -13,15 +13,14 @@ public class Client {
             extension = true;
         }
 
-        /* Make sure to pass the extension variable into your constructor! */
-        AbstractStrategyGame game = new Quoridor();
+        AbstractStrategyGame game = new Quoridor(extension);
 
         System.out.println(game.instructions());
         System.out.println();
 
         while (!game.isGameOver()) {
             System.out.println(game);
-            System.out.printf("Player %d's turn.\n", game.getNextPlayer());
+            System.out.printf("Player %d's turn.\n", game.getNextPlayer() + 1);
             try {
                 game.makeMove(game.getMove(console));
             } catch (IllegalArgumentException ex) {

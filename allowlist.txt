@@ -12,6 +12,8 @@
 # For class initialization
 java.lang.Object#<init>
 
+java.lang.Enum#<init>
+
 java.lang.Object#toString
 
 java.lang.String#<init>
@@ -26,8 +28,11 @@ java.lang.String#substring
 java.lang.String#toUpperCase
 java.lang.String#toLowerCase
 java.lang.String#toString
-
+java.lang.String#startsWith
+java.lang.String#split
 java.lang.String#format
+
+java.lang.String#repeat
 
 java.lang.Integer#parseInt
 java.lang.Double#parseDouble
