@@ -8,10 +8,11 @@
     <!-- =========================================
     CSE 123 
     ========================================= -->
+    <!-- All Client classes -->
+    <suppress checks=".*" files=".*[\\/](Client)\.java" />
     <!-- Provided Files C0: Search Engine project -->
     <suppress checks=".*" files=".*[\\/](Media)\.java" />
     <!-- Provided Files P0: Ciphers project -->
-    <suppress checks=".*" files=".*[\\/](Client)\.java" />
     <suppress checks=".*" files=".*[\\/](Cipher)\.java" />
     <!-- Provided Files C1: Abstract Strategy Game project -->
     <suppress checks=".*" files=".*[\\/](AbstractStrategyGame)\.java" />

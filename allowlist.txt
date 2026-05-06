@@ -18,6 +18,7 @@ java.lang.Object#toString
 
 java.lang.String#<init>
 java.lang.String#equals
+java.lang.String#isEmpty
 java.lang.String#equalsIgnoreCase
 java.lang.String#length
 java.lang.String#charAt
@@ -135,3 +136,8 @@ java.lang.Math#max
 java.util.Random#<init>
 java.util.Random#nextInt
 
+# Used in default code
+java.text.SimpleDateFormat#<init>
+java.lang.System#currentTimeMillis
+java.util.Date#<init>
+java.text.DateFormat#format
