@@ -11,6 +11,8 @@
         <module>p0-ciphers</module>
         <module>p1-mini-git</module>
         <module>c1-abstract-strategy-game</module>
+        <module>c2-grammar-solver</module>
+        <module>p2-disaster-relief</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

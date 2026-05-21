@@ -16,4 +16,8 @@
     <suppress checks=".*" files=".*[\\/](Cipher)\.java" />
     <!-- Provided Files C1: Abstract Strategy Game project -->
     <suppress checks=".*" files=".*[\\/](AbstractStrategyGame)\.java" />
+    <!-- Provided Files C2: Grammar Solver project -->
+    <suppress checks=".*" files=".*[\\/](GrammarMain)\.java" />
+    <suppress checks=".*" files=".*[\\/](Allocation)\.java" />
+    <suppress checks=".*" files=".*[\\/](Region)\.java" />
 </suppressions>

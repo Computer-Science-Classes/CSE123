@@ -25,6 +25,7 @@ java.lang.String#charAt
 java.lang.String#contains
 java.lang.String#valueOf
 java.lang.String#indexOf
+java.lang.String#lastIndexOf
 java.lang.String#substring
 java.lang.String#toUpperCase
 java.lang.String#toLowerCase
@@ -32,6 +33,8 @@ java.lang.String#toString
 java.lang.String#startsWith
 java.lang.String#split
 java.lang.String#format
+java.lang.String#trim
+java.lang.String#endsWith
 
 java.lang.String#repeat
 
@@ -78,6 +81,8 @@ java.util.ArrayList#contains
 java.util.ArrayList#clear
 java.util.ArrayList#indexOf
 java.util.ArrayList#set
+
+java.util.Arrays#asList
 
 java.util.Queue#add
 java.util.Queue#remove

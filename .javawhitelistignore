@@ -23,3 +23,10 @@
 
 # C1: Abstract Strategy Game
 **/src/main/java/AbstractStrategyGame.java
+
+# C2: Grammar Solver
+**/src/main/java/GrammarMain.java
+
+# P2: Diaster Relief
+**/src/main/java/Allocation.java
+**/src/main/java/Region.java

@@ -1,0 +1,4 @@
+sentence::=article object verb
+article::=the|a
+object::=cat|dog
+verb::=runs|walks
